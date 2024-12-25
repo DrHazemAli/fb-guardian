@@ -1,0 +1,44 @@
+body {
+    margin: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  /* Simple media query for narrower screens */
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 1rem;
+    }
+  
+    input[type="password"],
+    input[type="text"] {
+      font-size: 0.9rem;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  }
+  

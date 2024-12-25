@@ -1,0 +1,28 @@
+{
+    "name": "Facebook Hate/Keyword Detector",
+    "description": "Flags hateful or violent Facebook comments and certain user-defined keywords, allows quick blocking (manual or automatic).",
+    "version": "1.1",
+    "manifest_version": 3,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "*://*.facebook.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  

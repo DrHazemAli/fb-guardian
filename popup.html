@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hate/Keyword Detector Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to optional CSS for responsiveness -->
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Detector Settings</h1>
+
+  <div class="section">
+    <label for="apiKey">OpenAI API Key:</label>
+    <input type="password" id="apiKey" placeholder="sk-...">
+  </div>
+
+  <div class="section">
+    <label for="keywords">Custom Keywords (comma-separated):</label>
+    <input type="text" id="keywords" placeholder="keyword1, keyword2, ...">
+  </div>
+
+  <div class="section">
+    <label>Blocking Mode:</label>
+    <div>
+      <label>
+        <input type="radio" name="blockingMode" value="manual" checked>
+        Manual (show "Block User" button)
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio" name="blockingMode" value="automatic">
+        Automatic (attempt to block without asking)
+      </label>
+    </div>
+  </div>
+
+  <button id="saveBtn">Save Settings</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
